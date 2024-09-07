@@ -5,7 +5,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://homelyftapi.vercel.app', // Update dengan URL API Anda jika berbeda
+        target: 'https://homelyftapi.vercel.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
         secure: false,
       },
     },
