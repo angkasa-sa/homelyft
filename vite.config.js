@@ -5,7 +5,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // Update dengan URL API Anda jika berbeda
+        target: 'https://homelyft.vercel.app', // Update dengan URL API Anda jika berbeda
         secure: false,
       },
     },
