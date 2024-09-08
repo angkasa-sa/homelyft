@@ -7,7 +7,6 @@ export default defineConfig({
       '/api': {
         target: 'https://homelyftapi.vercel.app',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
         secure: false,
       },
     },
